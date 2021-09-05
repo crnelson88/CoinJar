@@ -28,7 +28,7 @@ namespace CoinJar
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CoinJar", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CoinJar.Api", Version = "v1" });
             });
 
             services.AddDbContext<CoinJarDataContext>(options =>
@@ -48,9 +48,10 @@ namespace CoinJar
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CoinJar v1"));
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CoinJar.Api v1"));
 
             app.UseHttpsRedirection();
 
