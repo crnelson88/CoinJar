@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/CoinJar/Properties/serviceDependencies.CoinJarApi - Web Deploy.json
