@@ -11,6 +11,6 @@ namespace CoinJar.Data
         public CoinJarDataContext(DbContextOptions<CoinJarDataContext> options) : base(options)
         {
         }
-        public DbSet<ICoin> Coins { get; set; }
+        public DbSet<Coin> Coins { get; set; }
     }
 }
