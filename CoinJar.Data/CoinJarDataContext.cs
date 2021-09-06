@@ -1,4 +1,5 @@
 ﻿using CoinJar.Entities;
+using CoinJar.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace CoinJar.Data
@@ -10,6 +11,6 @@ namespace CoinJar.Data
         public CoinJarDataContext(DbContextOptions<CoinJarDataContext> options) : base(options)
         {
         }
-        public DbSet<Coin> Coins { get; set; }
+        public DbSet<ICoin> Coins { get; set; }
     }
 }

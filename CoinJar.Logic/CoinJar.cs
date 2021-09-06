@@ -17,7 +17,7 @@ namespace CoinJar.Logic
         {
             if (_coinJarDataContext.Coins.Sum(x => x.Volume) + coin.Volume > 42)
             {
-                throw new Exception();
+                throw new Exception("There is no more room in the jar for this coin.");
             }
             _coinJarDataContext.Add(coin);
             _coinJarDataContext.SaveChanges();

@@ -8,9 +8,7 @@ namespace CoinJar.Api.Model
 {
     public class AddCoinRequest
     {
-        [Required(ErrorMessage = "Amount is required")]
-        public decimal Amount { get; set; }
-        [Required(ErrorMessage = "Volume is required")]
-        public decimal VolumeInFluidOunces { get; set; }
+        [Required(ErrorMessage = "Please select a coin to add to the jar")]
+        public CoinType CoinType { get; set; }
     }
 }

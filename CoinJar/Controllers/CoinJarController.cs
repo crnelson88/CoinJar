@@ -49,11 +49,37 @@ namespace CoinJar.Controllers
                 return BadRequest(ModelState);
             }
 
-            Coin coin = new Coin
+            Coin coin = new Coin();
+
+            switch (addCoinRequest.CoinType)
             {
-                Amount = addCoinRequest.Amount,
-                Volume = addCoinRequest.VolumeInFluidOunces
-            };
+                case CoinType.Cent:
+                    coin.Amount = 0.01M;
+                    coin.Volume = 2M;
+                    break;
+                case CoinType.Nickel:
+                    coin.Amount = 0.05M;
+                    coin.Volume = 4M;
+                    break;
+                case CoinType.Dime:
+                    coin.Amount = 0.10M;
+                    coin.Volume = 5M;
+                    break;
+                case CoinType.QuarterDollar:
+                    coin.Amount = 0.25M;
+                    coin.Volume = 6M;
+                    break;
+                case CoinType.HalfDollar:
+                    coin.Amount = 0.50M;
+                    coin.Volume = 8M;
+                    break;
+                case CoinType.Dollar:
+                    coin.Amount = 1.00M;
+                    coin.Volume = 10M;
+                    break;
+                default:
+                    break;
+            }
 
             _coinJar.AddCoin(coin);
 
