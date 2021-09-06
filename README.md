@@ -25,5 +25,5 @@ When you add a coin some hardcoded values are set for the volume the coins will 
                 HalfDollar will take up 8 Fluid Ounces and has an amount of 50c
                 Dollar will take up 10 Fluid Ounces and has an amount of 100c
                
-When adding a coin you will get a error with code 500 when the jar is too full to accept your coin.
+When adding a coin you will get an error with code 500 when the jar is too full to accept your coin.
 The error message will state that the jar is too full to accept your coin.
